@@ -22,7 +22,8 @@ body {
 }
 
 .header img {
-    width: 150px;
+    margin: 5px;
+    width: 125px;
 }
 
 .main-info {
