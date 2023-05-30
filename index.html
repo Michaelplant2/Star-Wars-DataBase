@@ -6,19 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Star Wars DataBase</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     <div class="main-container">
       <div class="header">
-        <img src="img/star-wars-logo.png" alt="Star Wars Logo">
-        <div class="nav"></div>
+        <div class="topnav">
+          <a href="#"><img src="img/star-wars-logo.png" alt="Star Wars Logo"></a>
+          <div id="myLinks">
+            <a href="#People">People</a>
+            <a href="#Planets">Planets</a>
+            <a href="#StarShips">StarShips</a>
+            <a href="#Vehicles">Vehicles</a>
+            <a href="#Species">Species</a>
+            <a href="#Films">Films</a>
+          </div>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
       </div>
       <div class="main">
         <div class="main-info">
-          <div class="container"></div>
+          <div class="container">
+            <h1>Person Name</h1>
+            <img src="" alt="">
+          </div>
         </div>
         <div class="info">
-          <div class="container"></div>
+          <div class="container">
+            <div class="person-info">
+              <ul>
+              <li>Home Planet:</li>
+              <li>Birth Year:</li>
+              <li>Gender:</li>
+              <li>Species:</li>
+              <li>Height:</li>
+              <li>Weight:</li>
+              <li>Hair Color:</li>
+              <li>Eye Color:</li>
+              <li>Films:</li>
+              </ul>
+            </div>
+            <!-- <div class="movie-info">
+              <ul>
+                <li>title</li>
+                <li>episode</li> 
+                <li>opening</li>
+                <li>director</li>
+                <li>producer</li>
+                <li>release date</li>
+              </ul>
+            </div> -->
+          </div>
         </div>
       </div>
       <footer></footer>
