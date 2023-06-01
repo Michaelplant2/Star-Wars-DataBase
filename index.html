@@ -14,19 +14,19 @@
     <div class="main-container">
       <header class="header">
           <a href="index.html"><img src="img/star-wars-logo.png" alt="Star Wars Logo"></a>
-          <div class="searchBar">
-            <input type="text" placeholder="Hello There!">
-            <button id="searchBtn">Search</button>
-          </div>
+          <form id="form" class="searchBar">
+            <input id="search" type="text" placeholder="Hello There!">
+            <button class="searchBtn" type="submit">Search</button>
+          </form>
       </header>
       <main class="main">
         <section class="main-info">
-            <h1>Person Name</h1>
-            <img src="" alt="">
+          <div id="name-info">
+          </div>
         </section>
         <section class="info">
-            <div class="person-info">
-              <ul>
+            <div id="person-info">
+              <!-- <ul>
               <li>Home Planet:</li>
               <li>Birth Year:</li>
               <li>Gender:</li>
@@ -36,7 +36,7 @@
               <li>Hair Color:</li>
               <li>Eye Color:</li>
               <li>Films:</li>
-              </ul>
+              </ul> -->
             </div>
         </section>
       </main>
