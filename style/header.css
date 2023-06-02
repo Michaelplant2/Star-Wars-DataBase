@@ -1,4 +1,4 @@
-.header {
+header {
     padding: 5px 15px;
     display: flex;
     justify-content: space-between;
@@ -7,7 +7,7 @@
     border-radius: 5px;
 }
 
-.header a img{
+header a img{
     width: 125px;
 }
 
