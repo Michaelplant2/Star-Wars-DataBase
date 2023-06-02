@@ -17,6 +17,20 @@ async function getJSON(url) {
     `;
 }
 
+    // bio.innerHTML = `
+    // <ul>
+    // <li>Home Planet:</li>
+    // <li>Birth Year:</li>
+    // <li>Gender:</li>
+    // <li>Species:</li>
+    // <li>Height:</li>
+    // <li>Weight:</li>
+    // <li>Hair Color:</li>
+    // <li>Eye Color:</li>
+    // <li>Films:</li>
+    // </ul>
+    // `
+
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     const searchTerm = search.value;
