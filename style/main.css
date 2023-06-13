@@ -1,13 +1,29 @@
 .main-info {
-    margin-top: 15px;
-    padding: 1% 5%;
+    margin-top: 20px;
+    padding: 2% 5%;
     border: 4px solid #ffffff;
-    border-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 .info {
-    margin-top: 15px;
-    padding: 1% 5%;
-    border: 4px solid #ffffff;
-    border-radius: 5px;
+    padding: 2% 5%;
+    border-left: 4px solid #ffffff;
+    border-right: 4px solid #ffffff;
+    border-bottom: 4px solid #ffffff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.title {
+    font-size: 35px;
+}
+
+#name {
+    font-size: 35px;
+}
+
+.how-to {
+    font-size: 20px;
+    padding-top: 10px;
 }
