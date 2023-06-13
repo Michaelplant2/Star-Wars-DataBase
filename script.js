@@ -22,7 +22,7 @@ function nameData(persons) {
   persons.forEach((person) => {
     const {name} = person;
     nameInfo.innerHTML = `
-        <h1>${name}</h1>
+        <h2 id="name">${name}</h2>
         <img src="${imgUrl + name}"/>`;
   });
 }
@@ -32,15 +32,15 @@ function bioData(bios) {
       const {homeworld, birth_year, gender, species, height, mass, hair_color, eye_color, films} = bio;
       bioInfo.innerHTML = `
         <ul>
-            <li>Home Planet: ${homeworld}</li>
-            <li>Birth Year: ${birth_year}</li>
-            <li>Gender: ${gender}</li>
-            <li>Species: ${species}</li>
-            <li>Height: ${height}</li>
-            <li>Weight: ${mass}</li>
-            <li>Hair Color: ${hair_color}</li>
-            <li>Eye Color: ${eye_color}</li>
-            <li>Films: ${films}</li>
+            <li><h3>Home Planet:</h3> ${homeworld}</li>
+            <li><h3>Birth Year:</h3> ${birth_year}</li>
+            <li><h3>Gender:</h3> ${gender}</li>
+            <li><h3>Species:</h3> ${species}</li>
+            <li><h3>Height:</h3> ${height}</li>
+            <li><h3>Weight:</h3> ${mass}</li>
+            <li><h3>Hair Color:</h3> ${hair_color}</li>
+            <li><h3>Eye Color:</h3> ${eye_color}</li>
+            <li><h3>Films:</h3> ${films}</li>
         </ul>`;
     });
   }
