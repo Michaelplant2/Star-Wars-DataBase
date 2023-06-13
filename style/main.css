@@ -27,3 +27,10 @@
     font-size: 20px;
     padding-top: 10px;
 }
+
+.howto-aurebesh {
+    margin: 6px 0;
+    letter-spacing: 1px;
+    font-family: aurebesh;
+    font-size: 12px
+}
