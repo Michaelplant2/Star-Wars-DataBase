@@ -13,11 +13,15 @@ footer div {
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    gap: 5px;
+    gap: 10px;
     text-align: center;
 }
 
 .socials {
     display: flex;
     gap: 20px;
+}
+
+.copyright {
+    font-size: 10px;
 }
