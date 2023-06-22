@@ -49,14 +49,14 @@ function bioData(bios) {
     } = bio;
     bioInfo.innerHTML = `
         <ul>
-            <li><h3>Home Planet:</h3> ${homeworld}</li>
-            <li><h3>Birth Year:</h3> ${birth_year}</li>
-            <li><h3>Gender:</h3> ${gender}</li>
-            <li><h3>Species:</h3> ${species}</li>
-            <li><h3>Height:</h3> ${height}</li>
-            <li><h3>Weight:</h3> ${mass}</li>
-            <li><h3>Hair Color:</h3> ${hair_color}</li>
-            <li><h3>Eye Color:</h3> ${eye_color}</li>
+            <li><h3>Home Planet: </h3><p>${homeworld}</p></li>
+            <li><h3>Birth Year: </h3><p>${birth_year}</p></li>
+            <li><h3>Gender: </h3><p>${gender}</p></li>
+            <li><h3>Species: </h3><p>${species}</p></li>
+            <li><h3>Height: </h3><p>${height}</p></li>
+            <li><h3>Weight: </h3><p>${mass}</p></li>
+            <li><h3>Hair Color: </h3><p>${hair_color}</p></li>
+            <li><h3>Eye Color: </h3><p>${eye_color}</p></li>
         </ul>`;
   });
 }

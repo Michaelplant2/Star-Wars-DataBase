@@ -23,6 +23,18 @@
     font-size: 35px;
 }
 
+li {
+    margin: 6px 0;
+}
+
+li h3 {
+    text-decoration: underline;
+}
+
+li p {
+    margin-left: 5px;
+}
+
 .how-to {
     font-size: 20px;
     padding-top: 25px;
