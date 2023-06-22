@@ -18,10 +18,10 @@ header a img{
 }
 
 .searchBar input{
-    width: 140px;
+    width: 150px;
+    height: 28px;
     padding: 2px;
     background-color: black;
-    color: #ffffff;
     border: 2px solid #ffffff;
 }
 
@@ -32,11 +32,10 @@ header a img{
 }
 
 .searchBar button {
-    margin-top: 5px;
-    padding-top: 1px;
+    margin-top: 8px;
+    padding-top: 2px;
     width: 85px;
     font-family: aurebesh;
-    color: #ffffff;
     background-color: black;
     border: 2px solid #ffffff;
     border-radius: 10px;
