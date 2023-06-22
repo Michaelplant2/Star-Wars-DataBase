@@ -14,9 +14,10 @@ footer div {
     align-items: center;
     justify-content: flex-end;
     gap: 5px;
+    text-align: center;
 }
 
 .socials {
     display: flex;
-    gap: 15px;
+    gap: 20px;
 }
