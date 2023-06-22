@@ -4,7 +4,7 @@ let swUrl = "https://swapi.dev/api/people/?search=";
 const form = document.getElementById("form");
 const search = document.getElementById("search");
 const nameInfo = document.getElementById("name-info");
-const bioInfo = document.getElementById("person-info");
+const personInfo = document.getElementById("person-info");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -35,8 +35,23 @@ function nameData(persons) {
   });
 }
 
+async function callHome(bio) {
+  const response = await fetch(bio.homeworld);
+  const data = await response.json();
+  bio.homeworld = data.name;
+  return bio
+}
+
+// async function callSpecies(bio) {
+//   const response = await fetch(bio.species);
+//   const data = await response.json();
+//   bio.species = data.name;
+//   return bio
+// }
+
 function bioData(bios) {
-  bios.forEach((bio) => {
+  bios.forEach(async(bio) => {
+    home = await callHome(bio);
     const {
       homeworld,
       birth_year,
@@ -47,7 +62,7 @@ function bioData(bios) {
       hair_color,
       eye_color,
     } = bio;
-    bioInfo.innerHTML = `
+    personInfo.innerHTML = `
         <ul>
             <li><h3>Home Planet: </h3><p>${homeworld}</p></li>
             <li><h3>Birth Year: </h3><p>${birth_year}</p></li>
