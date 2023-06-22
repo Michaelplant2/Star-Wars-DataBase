@@ -51,7 +51,7 @@ async function callHome(bio) {
 
 function bioData(bios) {
   bios.forEach(async(bio) => {
-    home = await callHome(bio);
+    bio = await callHome(bio);
     const {
       homeworld,
       birth_year,
