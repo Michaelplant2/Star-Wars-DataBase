@@ -32,7 +32,7 @@ async function getHome(person) {
 
 async function getSpecies(person) {
   if(person.species.length == 0){
-    return 'Undefined'
+    return 0
   }
   const speciesData = await fetch(person.species).then((res) => res.json());
   person.species = speciesData.name;
