@@ -27,18 +27,21 @@ async function getSwInfo(url) {
 
 async function getHome(person) {
   const homeData = await fetch(person.homeworld).then((res) => res.json());
-  console.log(homeData);
+  person.homeworld = homeData.name
 };
 
-// async function getSpecies(person) {
-//   const response = await fetch(person.species);
-//   const speciesData = await response.json();
-//   person.species = speciesData.name;
-//   return person;
-// };
+async function getSpecies(person) {
+  if(person.species.length == 0){
+    return 'Undefined'
+  }
+  const speciesData = await fetch(person.species).then((res) => res.json());
+  person.species = speciesData.name;
+};
 
-function personData(data) {
+async function personData(data) {
   let person = data[0];
+  await getHome(person);
+  await getSpecies(person);
   nameInfo.innerHTML = `
     <h2 id="name">${person.name}</h2>
     <p class="aurebesh">${person.name}</p>`;
@@ -47,7 +50,7 @@ function personData(data) {
       <li><h3>Home Planet: </h3><p>${person.homeworld}</p></li>
       <li><h3>Birth Year: </h3><p>${person.birth_year}</p></li>
       <li><h3>Gender: </h3><p>${person.gender}</p></li>
-      <li><h3>Species: </h3><p>${person.species}}</p></li>
+      <li><h3>Species: </h3><p>${person.species}</p></li>
       <li><h3>Height: </h3><p>${person.height}</p></li>            
       <li><h3>Weight: </h3><p>${person.mass}</p></li>
       <li><h3>Hair Color: </h3><p>${person.hair_color}</p></li>
