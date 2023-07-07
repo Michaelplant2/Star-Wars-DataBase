@@ -32,7 +32,7 @@ async function getSwInfo(url) {
   personInfo.innerHTML = load;
     const data = await fetch(url).then((res) => res.json());
     console.log(data);
-    personData(data.results);
+    // personData(data.results);
 };
 
 async function getHome(person) {
