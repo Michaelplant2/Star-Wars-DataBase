@@ -12,7 +12,7 @@ form.addEventListener("submit", (e) => {
   if (getSwInfo(swUrl + searchTerm)) {
     search.value = "";
   }
-  form.blur();
+  search.blur();
 });
 
 async function getSwInfo(url) {
