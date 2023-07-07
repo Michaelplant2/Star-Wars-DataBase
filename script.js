@@ -8,7 +8,6 @@ const personInfo = document.getElementById("person-info");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  e.target.focus({preventScroll: true});
   const searchTerm = search.value;
   if (getSwInfo(swUrl + searchTerm)) {
     search.value = "";

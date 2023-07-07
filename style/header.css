@@ -23,6 +23,7 @@ header a img{
     padding: 2px;
     background-color: black;
     border: 2px solid #ffffff;
+    scroll-behavior: none;
 }
 
 .searchBar ::placeholder,
