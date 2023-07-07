@@ -9,30 +9,40 @@ const personInfo = document.getElementById("person-info");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const searchTerm = search.value;
-  if (searchTerm) {
-    getSwInfo(swUrl + searchTerm);
+  if (getSwInfo(swUrl + searchTerm)) {
     search.value = "";
   }
 });
 
 async function getSwInfo(url) {
-  try {
+  let load = `
+  <div class="load-div">
+  <div id="loader">
+    <div class="ls-particles ls-part-1"></div>
+    <div class="ls-particles ls-part-2"></div>
+    <div class="ls-particles ls-part-3"></div>
+    <div class="ls-particles ls-part-4"></div>
+    <div class="ls-particles ls-part-5"></div>
+    <div class="lightsaber ls-left ls-blue"></div>
+    <div class="lightsaber ls-right ls-red"></div>
+  </div>
+  <p class="load-p">Loading Information</p>
+  <p class="load-p">May The Force Be With You</p>
+  </div>`;
+  personInfo.innerHTML = load;
     const data = await fetch(url).then((res) => res.json());
     console.log(data);
     personData(data.results);
-  } catch (error) {
-    console.log(error);
-  }
 };
 
 async function getHome(person) {
   const homeData = await fetch(person.homeworld).then((res) => res.json());
-  person.homeworld = homeData.name
+  person.homeworld = homeData.name;
 };
 
 async function getSpecies(person) {
-  if(person.species.length == 0){
-    return 0
+  if (person.species.length == 0) {
+    return (person.species = "Unknown");
   }
   const speciesData = await fetch(person.species).then((res) => res.json());
   person.species = speciesData.name;
