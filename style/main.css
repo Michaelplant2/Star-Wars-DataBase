@@ -7,6 +7,9 @@
 }
 
 .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 2% 5%;
     border-left: 4px solid #ffffff;
     border-right: 4px solid #ffffff;
@@ -21,6 +24,14 @@
 
 #name {
     font-size: 35px;
+}
+
+#person-info {
+    margin: auto;
+}
+
+.img {
+    width: 160px;
 }
 
 li {

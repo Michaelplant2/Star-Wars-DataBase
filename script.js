@@ -1,10 +1,12 @@
 let swUrl = "https://swapi.dev/api/people/?search=";
-// let imgUrl = "https://en.wikipedia.org/api/rest_v1/page/summary/";
+let imgUrl = "https://en.wikipedia.org/api/rest_v1/page/summary/";
 
 const form = document.getElementById("form");
 const search = document.getElementById("search");
 const nameInfo = document.getElementById("name-info");
 const personInfo = document.getElementById("person-info");
+const personImg = document.getElementById("person-img");
+
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -14,6 +16,7 @@ form.addEventListener("submit", (e) => {
   }
   search.blur();
 });
+
 
 async function getSwInfo(url) {
   let load = `
@@ -31,6 +34,7 @@ async function getSwInfo(url) {
   <p class="load-p">May The Force Be With You</p>
   </div>`;
   personInfo.innerHTML = load;
+  personImg.innerHTML = "";
     const data = await fetch(url).then((res) => res.json());
     console.log(data);
     personData(data.results);
@@ -41,6 +45,7 @@ async function getHome(person) {
   person.homeworld = homeData.name;
 };
 
+
 async function getSpecies(person) {
   if (person.species.length == 0) {
     return (person.species = "Unknown");
@@ -49,10 +54,12 @@ async function getSpecies(person) {
   person.species = speciesData.name;
 };
 
+
 async function personData(data) {
   let person = data[0];
   await getHome(person);
   await getSpecies(person);
+  let wikiImg = await fetch(imgUrl + person.name).then((res) => res.json());
   nameInfo.innerHTML = `
     <h2 id="name">${person.name}</h2>
     <p class="aurebesh">${person.name}</p>`;
@@ -67,4 +74,6 @@ async function personData(data) {
       <li><h3>Hair Color: </h3><p>${person.hair_color}</p></li>
       <li><h3>Eye Color: </h3><p>${person.eye_color}</p></li>
     </ul>`;
+  personImg.innerHTML = `
+    <img src="${wikiImg.thumbnail.source}" alt="${person.name}" class="img">`
 };
