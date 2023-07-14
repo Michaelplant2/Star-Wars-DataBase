@@ -35,9 +35,12 @@ async function getSwInfo(url) {
   </div>`;
   personInfo.innerHTML = load;
   personImg.innerHTML = "";
-    const data = await fetch(url).then((res) => res.json());
-    console.log(data);
-    personData(data.results);
+  const data = await fetch(url).then((res) => res.json());
+  console.log(data);
+  personData(data.results);
+  if (data.count == 0) { 
+    alert("Error finding information.\nTry a new name or variation");
+  }
 };
 
 async function getHome(person) {
