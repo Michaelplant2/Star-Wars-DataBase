@@ -39,7 +39,7 @@ async function getSwInfo(url) {
   console.log(data);
   personData(data.results);
   if (data.count == 0) { 
-    alert("Error finding information.\nTry a new name or variation");
+    alert("\t\t\tError finding information.\n\t\t\tTry a new name or variation");
   }
 };
 
